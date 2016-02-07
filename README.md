@@ -31,7 +31,7 @@ STM32CubeMX            | 4.12.0
 $ sudo apt-get install arm-none-eabi-gcc openocd
 $ git clone <copy the URL from the top of this page>
 $ cd stm32l-discovery-timer-template
-$ openocd -f board/stm32ldiscovery.cfg -c "program build/disco-test.elf reset"
+$ openocd -f board/stm32ldiscovery.cfg -c "program build/stm32l1-disco-template.elf reset"
 ```
 
 **Note:** For the User button to work correctly, the `SB1` solder bridge on the board *must* be opened board and the JP1 jumper *must* be set to the OFF position. This also disables the onboard power usage measurement circuitry, so the `SB2` and `SB14` solder bridges *can* then be removed as well, which opens up the PA4 and PC13 pins for normal use. 
