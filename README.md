@@ -35,6 +35,8 @@ $ make
 $ openocd -f board/stm32ldiscovery.cfg -c "program build/stm32l1-disco-template.elf reset"
 ```
 
+Tested on Linux Mint 17.2 64-bit.
+
 **Note:** For the User button to work correctly, the `SB1` solder bridge on the board *must* be opened and the JP1 jumper *must* be set to the OFF position. This also disables the onboard power usage measurement circuitry, so the `SB2` and `SB14` solder bridges *can* then be removed as well, which opens up the PA4 and PC13 pins for normal use. 
 
 That's it! With the included example, touching the capacitive sensor will cause a value corresponding to the location to be displayed on the LCD. The blue LED will toggle once per second and the green LED will toggle when the User button is pressed.
