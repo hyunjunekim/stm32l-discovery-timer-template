@@ -114,7 +114,7 @@ CFLAGS += -MD -MP -MF .dep/$(@F).d
 # LDFLAGS
 #######################################
 # link script
-LDSCRIPT = STM32L152RBTx_FLASH.ld
+LDSCRIPT = Src/STM32L152RBTx_FLASH.ld
 # libraries
 LIBS = -lc -lm -lnosys
 LIBDIR =
