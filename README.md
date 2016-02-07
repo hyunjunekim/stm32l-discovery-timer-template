@@ -16,8 +16,6 @@ This template is based on the free [STM32Cube library / framework from ST](http:
  
 The User button can be set up to trigger an interrupt or to be polled. By default it's set to trigger an interrupt. Polling is required for the capacitive sensors. A handy use for these boards is for various specialized timers, so the template includes an interrupt driven timebase, configured to trigger an interrupt once per second by default.
 
-**Note:** For the User button to work correctly, the `SB1` solder bridge on the board *must* be opened board and the JP1 jumper *must* be set to the OFF position. This also disables the onboard power usage measurement circuitry, so the `SB2` and `SB14` solder bridges *can* then be removed as well, which opens up the PA4 and PC13 pins for normal use. 
-
 #### Versions
 
 Library                | Version
@@ -35,6 +33,8 @@ $ git clone <copy the URL from the top of this page>
 $ cd stm32l-discovery-timer-template
 $ openocd -f board/stm32ldiscovery.cfg -c "program build/disco-test.elf reset"
 ```
+
+**Note:** For the User button to work correctly, the `SB1` solder bridge on the board *must* be opened board and the JP1 jumper *must* be set to the OFF position. This also disables the onboard power usage measurement circuitry, so the `SB2` and `SB14` solder bridges *can* then be removed as well, which opens up the PA4 and PC13 pins for normal use. 
 
 That's it! With the included example, touching the capacitive sensor will cause a value corresponding to the location to be displayed on the LCD. The blue LED will toggle once per second and the green LED will toggle when the User button is pressed.
 
