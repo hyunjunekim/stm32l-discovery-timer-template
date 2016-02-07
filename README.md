@@ -39,4 +39,6 @@ $ openocd -f board/stm32ldiscovery.cfg -c "program build/stm32l1-disco-template.
 
 That's it! With the included example, touching the capacitive sensor will cause a value corresponding to the location to be displayed on the LCD. The blue LED will toggle once per second and the green LED will toggle when the User button is pressed.
 
+Prebuilt binaries are also included.
+
 Check the [OpenOCD](http://openocd.org/) documentation for how to perform on-chip debugging from the command line.
