@@ -7,16 +7,17 @@
 
 void EXTI0_IRQHandler(void);
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim);
-
 void itoa(char* a, int i, int n);
+
 
 int main(void)
 {
     InitAll();
 
-    HAL_GPIO_WritePin(GPIOB, LD3_Pin, GPIO_PIN_SET);
-    HAL_GPIO_WritePin(GPIOB, LD4_Pin, GPIO_PIN_SET);
+    BSP_LED_On(LED_GREEN);
+    BSP_LED_On(LED_BLUE);
 
+    // See Inc/stm32l152c_discovery_glass_lcd.h for more LCD functions
     BSP_LCD_GLASS_DisplayString((uint8_t*)"READY");
 
     while (1) {
@@ -32,7 +33,7 @@ int main(void)
         // Read touch slider.
         int sliderPercent = getTouchSliderPercent();
         if (sliderPercent == -1) {
-            BSP_LCD_GLASS_DisplayString("------");
+            BSP_LCD_GLASS_DisplayString((uint8_t*)"------");
         }
         else {
             char s[] = "      ";
@@ -69,7 +70,7 @@ void itoa(char* a, int i, int n) {
     }
 }
 
-//#ifdef USE_FULL_ASSERT
+#ifdef USE_FULL_ASSERT
 
 void assert_failed(uint8_t* file, uint32_t line)
 {
@@ -77,4 +78,4 @@ void assert_failed(uint8_t* file, uint32_t line)
       ex: printf("Wrong parameters value: file %s on line %d\r\n", file, line) */
 }
 
-//#endif
+#endif

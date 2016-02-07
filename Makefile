@@ -6,7 +6,7 @@
 ######################################
 # target
 ######################################
-TARGET = disco-test
+TARGET = stm32l1-disco-template
 
 ######################################
 # building variables
