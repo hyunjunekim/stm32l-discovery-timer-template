@@ -20,12 +20,11 @@ The User button can be set up to trigger an interrupt or to be polled. By defaul
 
 ### Versions
 
-====================== ==================
-CMSIS / STM32Cube FW   1.4.0
-STM32 TouchSensing     2.1.1
-BSP / GLASS LCD        1.0.2
-STM32CubeMX            4.12.0
-====================== ==================
+| CMSIS / STM32Cube FW   | 1.4.0  | 
+| STM32 TouchSensing     | 2.1.1  | 
+| BSP / GLASS LCD        | 1.0.2  | 
+| STM32CubeMX            | 4.12.0 | 
+
 
 ### Usage
 
