@@ -31,6 +31,7 @@ STM32CubeMX            | 4.12.0
 $ sudo apt-get install arm-none-eabi-gcc openocd
 $ git clone <copy the URL from the top of this page>
 $ cd stm32l-discovery-timer-template
+$ make
 $ openocd -f board/stm32ldiscovery.cfg -c "program build/stm32l1-disco-template.elf reset"
 ```
 
