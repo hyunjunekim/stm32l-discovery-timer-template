@@ -27,15 +27,19 @@ STM32CubeMX            | 4.12.0
 
 #### Usage
 
+* Install gcc-arm-none-eabi by following the instructions [on Terry Guo's Launchpad](https://launchpad.net/~terry.guo/+archive/ubuntu/gcc-arm-embedded). Note the special instructions for Ubuntu. 
+
+* Then:
+
 ```
-$ sudo apt-get install arm-none-eabi-gcc openocd
+$ sudo apt-get install openocd git 
 $ git clone <copy the URL from the top of this page>
 $ cd stm32l-discovery-timer-template
 $ make
 $ openocd -f board/stm32ldiscovery.cfg -c "program build/stm32l1-disco-template.elf reset"
 ```
 
-Tested on Linux Mint 17.2 64-bit.
+Tested on Linux Mint 17.3 64-bit.
 
 **Note:** For the User button to work correctly, the `SB1` solder bridge on the board must be opened and the JP1 jumper must be set to the OFF position. This also disables the onboard power usage measurement circuitry, which removes the purpose for `SB2` and `SB14`. Those can then be removed as well, which opens up the PA4 and PC13 pins for normal use. 
 
