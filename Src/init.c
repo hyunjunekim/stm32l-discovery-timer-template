@@ -198,7 +198,7 @@ void Timebase_Init(void) {
 }
 
 
-static void Error_Handler(void)
+void Error_Handler(void)
 {
   BSP_LED_Off(LED3);
   BSP_LED_On(LED4);
